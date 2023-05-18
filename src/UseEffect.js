@@ -2,7 +2,7 @@ import Button from "./Button";
 import styles from "./App.module.css";
 import { useEffect, useState } from "react";
 
-function App() {
+function UseEffect() {
   const [counter, setValue] = useState(0);
   const [keyword, setKeyword] = useState("");
   const [showing, setShowing] = useState(false);
@@ -71,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default UseEffect;
