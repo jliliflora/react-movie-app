@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ToDoList.module.css";
 
-function App() {
+function ToDoList() {
   const [toDo, setToDo] = useState(""); //setDodo는 toDo를 수정해주는 함수, 절대 직접적으로 toDo값을 수정하지않고 함수를 이용해서 한다!!
   const [toDos, setToDos] = useState([]);
 
@@ -48,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default ToDoList;
