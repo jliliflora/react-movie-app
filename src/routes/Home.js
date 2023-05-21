@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Movie from "./components/Movie";
+import Movie from "../components/Movie";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +26,7 @@ function Home() {
           {movies.map((movie) => (
             <Movie
               key={movie.id} //key는 React.js에서만, map안에서 component들을 render할때 사용하는거!
+              id={movie.id}
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
