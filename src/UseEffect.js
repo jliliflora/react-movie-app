@@ -1,5 +1,5 @@
 import Button from "./Button";
-import styles from "./App.module.css";
+import styles from "./UseEffect.module.css";
 import { useEffect, useState } from "react";
 
 function UseEffect() {

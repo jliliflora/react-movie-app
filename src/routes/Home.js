@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import styles from "./Home.module.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -18,17 +19,20 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.movies}>
+          <h1>Loading...</h1>
+        </div>
       ) : (
-        <div>
+        <div className={styles.movies}>
           {movies.map((movie) => (
             <Movie
               key={movie.id} //key는 React.js에서만, map안에서 component들을 render할때 사용하는거!
               id={movie.id}
               coverImg={movie.medium_cover_image}
               title={movie.title}
+              year={movie.year}
               summary={movie.summary}
               genres={movie.genres}
             />
