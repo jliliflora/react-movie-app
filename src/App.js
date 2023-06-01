@@ -4,10 +4,10 @@ import Detail from "./routes/Detail";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/react-movie-app/movie/:id" element={<Detail />}></Route>
-        <Route path="/react-movie-app" element={<Home />}></Route>
+        <Route path="/movie/:id" element={<Detail />}></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </Router>
   );
